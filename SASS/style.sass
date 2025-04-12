@@ -1,0 +1,243 @@
+// Variables
+$primary-color: #9356DC;
+$secondary-color: #FF79DA;
+$tertiary-color: #99E2D0;
+$background-grey: #F6F6F6;
+$font-dark: #000;
+$font-light: #fff;
+$font-grey: #353535;
+
+// Mixins
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Reset
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: $background-grey;
+}
+
+// HEADER
+header {
+  background-color: $font-light;
+  padding: 20px;
+  text-align: center;
+
+  .logo {
+    width: 150px;
+  }
+}
+
+// PROMESSE
+.promesse {
+  background-color: #f3f3f3;
+  text-align: center;
+  padding: 30px 15px;
+
+  .L1 {
+    font-weight: 700;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .L2 {
+    font-size: 18px;
+    font-weight: 300;
+    color: $font-grey;
+  }
+
+  .button {
+    margin-top: 20px;
+    padding: 12px 24px;
+    background: linear-gradient(0deg, $primary-color, $secondary-color);
+    border-radius: 30px;
+    border: none;
+    color: $font-light;
+    font-size: 16px;
+    cursor: pointer;
+  }
+}
+
+// FONCTIONNEMENT
+.sections-fonctionnement {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 40px 20px;
+  background-color: $font-light;
+
+  .section-fonctionnement {
+    display: flex;
+    align-items: center;
+    background: $background-grey;
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+
+    .number {
+      background-color: $primary-color;
+      color: $font-light;
+      border-radius: 50%;
+      padding: 10px 15px;
+      margin-right: 15px;
+    }
+
+    i {
+      color: $font-grey;
+      margin-right: 10px;
+    }
+  }
+}
+
+// RESTAURANTS
+.restaurants {
+  padding: 40px 20px;
+  background-color: $background-grey;
+
+  .restaurants-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .restaurants-card {
+    display: grid;
+    gap: 20px;
+
+    .restaurant {
+      background: $font-light;
+      border-radius: 20px;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+
+      img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+      }
+
+      .badge {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background-color: $tertiary-color;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-weight: bold;
+        font-size: 14px;
+      }
+
+      .restaurant-content {
+        padding: 15px;
+
+        .restaurant-name {
+          font-size: 20px;
+          font-weight: 700;
+        }
+
+        .restaurant-location {
+          font-size: 16px;
+          color: $font-grey;
+        }
+      }
+
+      .like {
+        position: absolute;
+        bottom: 15px;
+        right: 15px;
+        font-size: 22px;
+        color: $font-grey;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+// FOOTER
+footer {
+  background-color: $font-dark;
+  color: $font-light;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .footer-logo {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    a {
+      color: $font-light;
+      text-decoration: none;
+
+      i {
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+// === RESPONSIVE ===
+
+// Tablet ≥ 768px
+@media screen and (min-width: 768px) {
+  .restaurants-card {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .sections-fonctionnement {
+    flex-direction: row;
+
+    .section-fonctionnement {
+      flex: 1;
+    }
+  }
+}
+
+// Desktop ≥ 1024px
+@media screen and (min-width: 1024px) {
+  .restaurants-card {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  .sections-fonctionnement {
+    gap: 30px;
+  }
+
+  .promesse {
+    .L1 {
+      font-size: 28px;
+    }
+
+    .L2 {
+      font-size: 20px;
+    }
+  }
+
+  footer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    .footer-links {
+      flex-direction: row;
+      gap: 20px;
+    }
+  }
+}
