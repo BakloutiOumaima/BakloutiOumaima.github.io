@@ -107,7 +107,6 @@ header {
 
 .promesse span {
   font-size: 16px;
-  font-weight: 500px;
   text-align: center;
   color: #ffffff;
 }
@@ -121,7 +120,7 @@ header {
 
 h1 {
   font-size: 24px;
-  font-weight: 700px;
+  font-weight: 700;
 }
 
 .sections-fonctionnement {
@@ -154,7 +153,6 @@ h1 {
 }
 
 .section-fonctionnement p {
-  font-weight: 500;
   font-size: 16px;
 }
 
@@ -239,7 +237,6 @@ h1 {
   height: 29px;
   color: #008766;
   background-color: #99e2d0;
-  font-weight: 500;
   font-size: 14px;
   position: absolute;
   top: 10px;
@@ -282,7 +279,6 @@ footer div {
   gap: 7px;
 }
 footer p {
-  font-weight: 500px;
   font-size: 16px;
 }
 .header-menu {
@@ -435,7 +431,6 @@ h3 {
   padding-left: 15px;
 }
 .dish-name {
-  font-weight: 500;
   font-size: 18px;
 }
 .dish-desc {
@@ -476,7 +471,6 @@ h3 {
 
 .btn-menu span {
   font-size: 16px;
-  font-weight: 500px;
   text-align: center;
   color: #ffffff;
 }
